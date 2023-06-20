@@ -18,28 +18,60 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clickListeners() {
-        TextView eTx_nombre = findViewById(R.id.eTx_nombre);
-        TextView eTx_apellidos = findViewById(R.id.eTx_apellidos);
-        TextView eTx_correo = findViewById(R.id.eTx_correo);
-        TextView eTx_clave = findViewById(R.id.eTx_clave);
-
-        String nombre = "", falta_nombre = "";
-        String apellidos = "", falta_apellidos = "";
-        String correo = "", falta_correo = "";
-        String clave = "", falta_clave = "";
-
-
-
 
         Button btn_crearCuenta = findViewById(R.id.btn_crearCuenta);
         btn_crearCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String mensajeToast = verificaEntradas();
+
+                if(mensajeToast.isEmpty()) {
+                    mensajeToast = getString(R.string.toast_usuarioCreado);
+                } else {
+                    mensajeToast = getString(R.string.toast_faltanParametros) + mensajeToast;
+                }
+
                 Toast tostada = new Toast(getBaseContext());
-                tostada.setText("Usuario creado");
+                tostada.setText(mensajeToast);
                 tostada.setDuration(Toast.LENGTH_SHORT);
                 tostada.show();
             }
         });
+    }
+
+    private String verificaEntradas() {
+        TextView eTx_nombre = findViewById(R.id.eTx_nombre);
+        TextView eTx_apellidos = findViewById(R.id.eTx_apellidos);
+        TextView eTx_correo = findViewById(R.id.eTx_correo);
+        TextView eTx_clave = findViewById(R.id.eTx_clave);
+
+        String nombre = "";
+        String apellidos = "";
+        String correo = "";
+        String clave = "";
+
+        Boolean pasaNoPasa = true;
+
+        nombre = eTx_nombre.getText().toString();
+        apellidos = eTx_apellidos.getText().toString();
+        correo = eTx_correo.getText().toString();
+        clave = eTx_clave.getText().toString();
+
+        String mensajeToast = "";
+
+        if(nombre.trim().isEmpty()){
+            mensajeToast = "Nombre";
+        }
+        if(apellidos.trim().isEmpty()) {
+            mensajeToast += ", Apellidos";
+        }
+        if(correo.trim().isEmpty()) {
+            mensajeToast += ", Correo";
+        }
+        if(clave.trim().isEmpty()) {
+            mensajeToast += ", Contraseña";
+        }
+
+        return mensajeToast;
     }
 }

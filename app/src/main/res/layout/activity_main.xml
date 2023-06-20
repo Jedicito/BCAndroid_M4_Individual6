@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
+        app:srcCompat="@drawable/baseline_add_reaction_24"
         tools:visibility="visible" />
 
     <EditText
