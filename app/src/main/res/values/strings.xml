@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">M4_Individual6</string>
+    <string name="btn_crearCuenta">Crear Cuenta</string>
+    <string name="eTx_nombreHint">Nombre</string>
+    <string name="eTx_apellidosHint">Apellidos</string>
+    <string name="eTx_correoHint">Correo electrónico</string>
+    <string name="eTx_claveHint">Contraseña</string>
+    <string name="img_retrato_desc">Retrato del empleado</string>
 </resources>
