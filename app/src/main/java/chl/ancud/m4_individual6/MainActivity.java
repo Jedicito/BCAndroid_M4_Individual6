@@ -60,16 +60,16 @@ public class MainActivity extends AppCompatActivity {
         String mensajeToast = "";
 
         if(nombre.trim().isEmpty()){
-            mensajeToast = "Nombre";
+            mensajeToast = getString(R.string.faltaNombre);
         }
         if(apellidos.trim().isEmpty()) {
-            mensajeToast += ", Apellidos";
+            mensajeToast += ", " + getString(R.string.faltaApellidos);
         }
         if(correo.trim().isEmpty()) {
-            mensajeToast += ", Correo";
+            mensajeToast += ", " + getString(R.string.faltaCorreo);
         }
         if(clave.trim().isEmpty()) {
-            mensajeToast += ", Contraseña";
+            mensajeToast += ", " + getString(R.string.faltaClave);
         }
 
         return mensajeToast;

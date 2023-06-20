@@ -8,4 +8,8 @@
     <string name="img_retrato_desc">Retrato del empleado</string>
     <string name="toast_usuarioCreado">Usuario Creado</string>
     <string name="toast_faltanParametros">Faltan parametros.</string>
+    <string name="faltaNombre">Nombre</string>
+    <string name="faltaApellidos">Apellidos</string>
+    <string name="faltaCorreo">Correo</string>
+    <string name="faltaClave">Contraseña</string>
 </resources>
