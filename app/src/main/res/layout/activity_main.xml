@@ -14,7 +14,6 @@
         android:ems="10"
         android:hint="@string/eTx_apellidosHint"
         android:inputType="text"
-        android:minHeight="48dp"
         android:textColorHint="#8D6E63"
         app:layout_constraintStart_toStartOf="@+id/eTx_nombre"
         app:layout_constraintTop_toBottomOf="@+id/eTx_nombre" />
@@ -40,7 +39,6 @@
         android:ems="10"
         android:hint="@string/eTx_nombreHint"
         android:inputType="text"
-        android:minHeight="48dp"
         android:textColorHint="#8D6E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +52,6 @@
         android:ems="10"
         android:hint="@string/eTx_correoHint"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"
         android:textColorHint="#8D6E63"
         app:layout_constraintStart_toStartOf="@+id/eTx_apellidos"
         app:layout_constraintTop_toBottomOf="@+id/eTx_apellidos" />
@@ -67,7 +64,6 @@
         android:ems="10"
         android:hint="@string/eTx_claveHint"
         android:inputType="textPassword"
-        android:minHeight="48dp"
         android:textColorHint="#8D6E63"
         app:layout_constraintStart_toStartOf="@+id/eTx_correo"
         app:layout_constraintTop_toBottomOf="@+id/eTx_correo" />
